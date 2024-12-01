@@ -1,1 +1,0 @@
-python train.py --dataset 'KuaiRand-Pure' --divide_style 'user_active_degree' --divide_ratio 0. --divide_feature_values '5,6,7,8' --pretrain_model_dir './pretrain_model/pre_trained_model.pth' --lora_user_features 'follow_user_num_range,register_days_range' --gate_num 4 --lr 0.1 --num_round 30
