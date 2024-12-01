@@ -9,6 +9,12 @@ With the recent success of large language models, particularly foundation models
 **Figure:**
 The model architecture of proposed FedPA.
 
+## Prepare Dataset
+Please download the dataset from the official link and then preprocess the dataset following 'data_preprocess.py'.
+
+## Running the Code
+Please run the code following file 'Open_Train' first and then file 'Fed_Train'.
+
 ## Citation
 If you find this project helpful, please consider to cite the following paper:
 
