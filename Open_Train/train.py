@@ -59,7 +59,7 @@ df, user_features, video_features = load_data(dataset_dir)
 logging.info('Preprocess the user feature dataframe')
 user_features.index = user_features['user_id'].values
 if config['user_feature_bin_flag'] is True:
-    user_feature_bin_dir = config['dataset'] + '_user_feature_bins_dict.txt'
+    user_feature_bin_dir = '../' + config['dataset'] + '_user_feature_bins_dict.txt'
     user_column_name_value_bins_dict = read_bin_dict(user_feature_bin_dir)
     new_user_features = wrap_preprocess_float_df(user_features, user_column_name_value_bins_dict)
 #     new_user_features.to_csv(dataset_dir+'bin_user_features.csv', index=False)
