@@ -13,7 +13,7 @@ The model architecture of proposed FedPA.
 Please download the dataset from the official link and then preprocess the dataset following 'data_preprocess.py'.
 
 ## Running the Code
-Please run the code following file 'Open_Train' first and then file 'Fed_Train'.
+Please run the code following files in 'Open_Train' first and then files in 'Fed_Train'.
 
 ## Citation
 If you find this project helpful, please consider to cite the following paper:
