@@ -53,7 +53,7 @@ logname = os.path.join(path, current_time+'.txt')
 initLogging(logname)
 
 # Load the data
-dataset_dir = './dataset/' + config['dataset'] + '/processed_data/'
+dataset_dir = '../dataset/' + config['dataset'] + '/processed_data/'
 df, user_features, video_features = load_data(dataset_dir)
 # Process the feature dataframe.
 logging.info('Preprocess the user feature dataframe')
@@ -70,7 +70,7 @@ else:
 logging.info('Preprocess the video feature dataframe')
 video_features.index = video_features['video_id'].values
 if config['video_feature_bin_flag'] is True:
-    video_feature_bin_dir = config['dataset'] + '_video_feature_bins_dict.txt'
+    video_feature_bin_dir = '../' + config['dataset'] + '_video_feature_bins_dict.txt'
     video_column_name_value_bins_dict = read_bin_dict(video_feature_bin_dir)
     new_video_features = wrap_preprocess_float_df(video_features, video_column_name_value_bins_dict)
 #     new_video_features.to_csv(dataset_dir+'bin_video_features.csv', index=False)
@@ -108,9 +108,9 @@ else:
     
 # Model.
 logging.info('Define the model')
-selected_user_feature_file_dir = config['dataset'] + '_selected_user_feature_dict.txt'
+selected_user_feature_file_dir = '../' + config['dataset'] + '_selected_user_feature_dict.txt'
 selected_user_features = read_feature_names(selected_user_feature_file_dir)
-selected_video_feature_file_dir = config['dataset'] + '_selected_video_feature_dict.txt'
+selected_video_feature_file_dir = '../' + config['dataset'] + '_selected_video_feature_dict.txt'
 selected_video_features = read_feature_names(selected_video_feature_file_dir)
 engine = MLPEngine(config, new_user_features, new_video_features, selected_user_features, selected_video_features)
 
